@@ -49,7 +49,7 @@ Replace "cmyenv" with your preferred name for the environment folder that's crea
 
 Once created, you must activate the virtual environment for it to be in effect. Do this everytime you start a new coding and terminal session.  
 
-Below are the Linux/macOS and Windows commands, respectively, to activate a Python virtual environment.
+Activate virtual environment (Linux/macOS and Windows commands):
 
 ```txt
 source venv/bin/activate
@@ -66,7 +66,7 @@ After activation, you’ll notice the environment name `(venv)` appears in your 
 
 You can then install packages as normal using `pip` or install all packages from `requirements.txt`.
 
-To activate an environment and install from a `requirements.txt` file:
+Activate an environment and install from a `requirements.txt` file:
 ```txt
 python -m venv venv
 source venv/bin/activate
@@ -76,7 +76,7 @@ pip install -r requirements.txt
 #### Python dontenv Module
 The middleware component uses the Python `dotenv` module, provided by the `python-dotenv` package. Use of this module requires a `.env` file to be placed in the root middleware folder. This file is not under source control, so you will need to ask a peer developer for information on file contents, or to get a copy for your local development environment.
 
-### music21
+### music21 Library
 Music21 is a Python-based toolkit for computer-aided musicology.  
 
 Project website: [https://www.music21.org/music21docs/](https://www.music21.org/music21docs/)  
@@ -90,7 +90,9 @@ cd ~/swdev/cps/music21
 pip install music21
 ```
 
-Note that the music21 installation guide recommends that you also run their custom configuration script. This sets a few default values, including the musicxml app that you will use for visualizing music scores. Run the following (outside of your venv environment) to start the configuration module:
+Note that the music21 installation guide recommends that you also run their custom configuration script. This sets a few default values, including the musicxml app that you will use for visualizing music scores. It is best to run the configuration script outside of your venv environment, e.g., before you start venv.  
+
+Run the music21 configuration module:
 
 ```text
 python3 -m music21.configure
